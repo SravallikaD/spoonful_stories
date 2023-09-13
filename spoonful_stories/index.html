@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <title>Spoonful Stories</title>
+    </head>
+    <body>
+        <!--nav bar-->
+        <div class="header">
+            <nav class="nav-bar">
+                <img src="images/logo.png" class="logo">
+                <a href="#" class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <h1 class="tit">Spoonful Stories</h1>
+                <div class="menu-bar">
+                    
+                    <ul>
+                        
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="signup.html">Signup/login</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!--serach-->
+            <div class="title">Find a Recipe!!</div>
+            <div class="search-box">
+                <div class="fa fa-search"></div>
+                <input type="text" name="" id="search" placeholder="What do you want to find?" onkeyup="search()"> 
+                <div class="fa fa-times" onclick="clearInput()"></div>
+            </div>
+        </div>
+        <!--search results-->
+        <div class="result">
+            <h1>Your serach result is:</h1>
+        </div>
+        <!-- main-->
+        <div class="card-grid">
+            <div class="food-list" id="food-list">
+                <p id="none" style="display: none;">Sorry, the food you were looking for was not available.</p>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="images/gulabjamun.jpg">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Gulabjamun </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="images/Omelette.webp">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Omlette </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get2ndRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="images/Mutton-Curry.webp">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Mutton </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get3rdRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="images/potato.jpeg">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Potato </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get4thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="images/sambar.jpg">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Sambar </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get5thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="images/brinjal.jpeg">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Brinjal </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get6thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="images/biryani.jpeg">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Biryani </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get7thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="images/Burger.webp">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Burger</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get8thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="images/fish.jpg">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Fish </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get9thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="images/fries.jpg">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Fries </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get10thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="images/egg.jpg">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Egg </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get11thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+            </div>
+            <!--end of main-->
+            <!--recipes-->
+            <div class="meal-detail" id="meal-detail">
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Gulabjamun</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">Gulab Jamun is a popular Indian dessert consisting of deep-fried dough balls soaked in a sweet syrup, known for its rich, sweet, and indulgent flavor. </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingredients:</h3>
+                        <p><br>Milk Powder
+                            <br>All-Purpose Flour (Maida)
+                            <br>Ghee (Clarified Butter)
+                            <br>Milk
+                            <br>Baking Soda
+                            <br>Oil (for deep frying)
+                            <br>Sugar
+                            <br>Water
+                            <br>Cardamom Powder
+                            <br>Rose Water (optional)
+                            <br>Chopped Nuts (for garnish, optional)
+                            <br>Saffron Strands (for garnish, optional)
+                    
+                        </p>
+                        <h3>Instructions:</h3>
+                        <p><br>Prepare dough with milk powder.
+                            <br>Form small smooth balls.
+                            <br>Heat oil for deep frying.
+                            <br>Fry balls until golden brown.
+                            <br>Make sugar syrup: sugar, water.
+                            <br>Add cardamom, rose water optionally.
+                            <br>Soak fried balls in syrup.
+                            <br>Let them absorb syrup.
+                            <br>Serve warm or at room temperature.
+                            <br>Garnish with nuts, saffron strands.</p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "images/gulabjamun.jpg" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://tinyurl.com/mryx6ezu" class="meal-link-btn">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+            <div class = "second-meal-detail" id="second-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Omlette</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">An omelette is a savory dish made from beaten eggs cooked in a pan and typically filled with various ingredients such as cheese, vegetables, or meats.</p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingredients:</h3>
+                        <p><br>Eggs
+                            <br>Salt
+                            <br>Pepper
+                            <br>Butter or Oil
+                            <br>Filling Ingredients (e.g., cheese, vegetables, meats)
+                            <br>Milk or Water (optional)
+                            <br>Additional Seasonings (optional)
+                            
+                            
+                            
+                            
+                        </p>
+                        <h3>Instruction:</h3>
+                        <p><br>Whisk eggs, add salt, pepper.
+                            <br>Heat butter/oil in a pan.
+                            <br>Pour egg mixture into pan.
+                            <br>Cook until edges set.
+                            <br>Add fillings evenly on one half.
+                            <br>Fold omelette in half.
+                            <br>Cook until set, then serve.
+                            </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "images/Omelette.webp" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://tinyurl.com/23pr9c5j" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div>  
+            <div class = "third-meal-detail" id="third-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Mutton</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">Mutton curry is a flavorful and aromatic dish made from tender pieces of mutton (goat or lamb) cooked in a rich and spiced gravy, often enjoyed in various regional styles around the world.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingredients:</h3>
+                        <p><br>
+                            <br> Mutton (goat or lamb)
+                            <br> Onions
+                            <br> Tomatoes
+                            <br>Garlic
+                            <br> Ginger
+                            <br> Cooking Oil or Ghee
+                            <br> Spices (coriander, cumin, turmeric, red chili powder, garam masala)
+                            <br> Yogurt or Cream
+                            <br> Water or Broth
+                            <br> Salt
+                            <br> Fresh Herbs (e.g., cilantro)
+                            <br> Optional Ingredients (e.g., green chilies, cardamom, bay leaves)
+                        </p>
+                        <h3>Instruction:</h3>
+                        <p><br>1. Rub salt, ground black pepper, and garlic powder on the pork tenderloin chop. Let it stay for at least 30 minutes.
+                            <br>2. Make the gravy by melting 1 tablespoon butter in a saucepan. When the butter melts, gradually add the flour and whisk until the color turns light brown. Pour-in the beef broth and stir. Add salt and pepper according to taste. Continue cooking until the texture becomes thick. Set aside.
+                            <br>3. Heat a skillet of frying pan then put-in 2 tablespoons of butter and let melt.
+                            <br>4. Pan-fry the pork loin chop in medium heat until the color of each side turns light brown (approximately 7 to 8 minutes per side). Set aside.
+                            <br>5. Heat a sizzling plate or fajita plate then put-in 1 tablespoon butter.
+                            <br>6. Distribute the butter around the plate then arrange rice, mixed vegetables, and pork loin chop.
+                            <br>7. Pour gravy over the pork loin chop then turn-off heat.
+                            <br>8. Serve. Share and enjoy!
+                            </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src="images/Mutton-Curry.webp" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://tinyurl.com/yckbt76x" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div>  
+            <div class = "four-meal-detail" id="four-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Potato</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">Potato curry is a comforting and flavorful dish made from diced potatoes cooked in a spiced gravy, enjoyed in various regional variations worldwide. 
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingridients:</h3>
+                        <p><br>Potatoes
+                            <br>Onions
+                            <br>Tomatoes
+                            <br>Cooking Oil or Ghee
+                            <br>Garlic
+                            <br>Ginger
+                            <br>Spices (such as cumin, coriander, turmeric, chili powder)
+                            <br>Water or Broth
+                            <br>Salt
+                        </p>
+                        <h3>Instruction:</h3>
+                        <p><br>Heat oil, add spices, onions.
+                            <br>Add garlic, ginger, and tomatoes.
+                            <br>Add potatoes, spices, and water.
+                            <br>Simmer until potatoes are tender.
+                            <br>Garnish with fresh herbs. Serve.
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "images/potato.jpeg" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://tinyurl.com/bde4yd4u" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div>  
+            <div class = "five-meal-detail" id="five-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Sambar</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">Sambar is a South Indian lentil-based stew enriched with vegetables and aromatic spices, known for its tangy and savory flavor.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingredients:</h3>
+                        <p><br>Toor Dal (Split Pigeon Peas)
+                            <br>Tamarind Pulp
+                            <br>Mixed Vegetables (e.g., drumsticks, okra, carrots, eggplant)
+                            <br>Sambar Powder (spice mix)
+                            <br>Turmeric Powder
+                            <br>Asafoetida (Hing)
+                            <br>Mustard Seeds
+                            <br>Curry Leaves
+                            <br>Red Chili Powder (optional)
+                            <br>Coriander Leaves (Cilantro)
+                            <br>Cooking Oil
+                            <br>Salt
+                        </p>
+                        <h3>Instructions:</h3>
+                        <p><br>Cook toor dal (pigeon peas) until soft.
+                            <br>Soak tamarind in warm water, extract pulp.
+                            <br>Boil mixed vegetables until tender.
+                            <br>Heat oil, add mustard seeds, asafoetida, curry leaves.
+                            <br>Sauté vegetables, add sambar powder, turmeric.
+                            <br>Add tamarind pulp, salt, and cooked dal.
+                            <br>Simmer until flavors meld. Garnish with cilantro. Serve.
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "images/sambar.jpgdw" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://tinyurl.com/ywbcrx4f" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+            <div class = "six-meal-detail" id="six-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Brinjal Curry</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">Brinjal curry is a delicious Indian dish made with eggplants (brinjals) cooked in a flavorful spiced gravy, known for its rich and savory taste
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingredients:</h3>
+                        <p><br>Brinjals (Eggplants)
+                            <br>Onions
+                            <br>Tomatoes
+                            <br>Cooking Oil
+                            <br>Garlic
+                            <br>Ginger
+                            <br>Spices (e.g., turmeric, cumin, coriander, red chili powder)
+                            <br>Garam Masala
+                            <br>Water
+                            <br>Salt
+                            <br>Fresh Coriander Leaves (Cilantro)
+                        </p>
+                        <h3>Instructions:</h3>
+                        <p><br>Heat oil, add onions, sauté.
+                            <br>Add garlic, ginger, and spices.
+                            <br>Stir in tomatoes until soft.
+                            <br>Add brinjals, water, and salt.
+                            <br>Simmer until brinjals are tender.
+                            <br>Garnish with fresh cilantro. Serve.
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "images/brinjal.jpeg" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://tinyurl.com/2yp63vne" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+            <div class = "seven-meal-detail" id="seven-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Biryani</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">Chicken biryani is a popular Indian rice dish prepared with marinated chicken pieces and aromatic spices, renowned for its exquisite flavor and aroma.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingredients:</h3>
+                        <p><br>Chicken
+                            <br>Basmati Rice
+                            <br>Onions
+                            <br>Tomatoes
+                            <br>Cooking Oil or Ghee
+                            <br>Yogurt
+                            <br>Ginger-Garlic Paste
+                            <br>Biryani Spices (e.g., cardamom, cinnamon, cloves)
+                            <br>Biryani Masala
+                            <br>Saffron Strands (for garnish, optional)
+                            <br>Fresh Coriander Leaves (Cilantro)
+                            <br>Fresh Mint Leaves
+                        </p>
+                        <h3>Instructions:</h3>
+                        <p><br>Marinate chicken with yogurt, spices.
+                            <br>Soak rice, parboil until 70% cooked.
+                            <br>Sauté onions, add ginger-garlic paste.
+                            <br>Add tomatoes, biryani spices.
+                            <br>Layer chicken, rice in a pot.
+                            <br>Sprinkle biryani masala.
+                            <br>Garnish with saffron, herbs.
+                            <br>Dum cook until aromatic. Serve.
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "images/biryani.jpeg" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://tinyurl.com/uxpfxkb4" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+            <div class = "eight-meal-detail" id="eight-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Chicken Burger</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">A chicken burger is a delicious sandwich made with a ground chicken patty seasoned to perfection and served in a bun with various toppings and condiments, renowned for its juicy and savory taste.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingredients:</h3>
+                        <p><br>Ground Chicken
+                            <br>Burger Buns
+                            <br>Lettuce Leaves
+                            <br>Tomato Slices
+                            <br>Onion Slices
+                            <br>Cheese Slices
+                            <br>Pickles (optional)
+                            <br>Ketchup
+                            <br>Mustard
+                            <br>Mayonnaise
+                            <br>Salt
+                            <br>Black Pepper
+                            <br>Cooking Oil
+                        </p>
+                        <h3>Instruction:</h3>
+                        <p><br>Season ground chicken with salt, pepper.
+                            <br>Shape into burger patties.
+                            <br>Heat oil, grill patties until cooked.
+                            <br>Toast burger buns lightly.
+                            <br>Assemble: bun, lettuce, patty, cheese.
+                            <br>Add tomato, onion, pickles.
+                            <br>Spread condiments, top with bun.
+                            <br>Serve with fries or salad. Enjoy!
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "images/Burger.webp" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://tinyurl.com/td757uct" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+            <div class = "nine-meal-detail" id="nine-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Fish</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">Fish curry is a flavorful dish made with fish pieces cooked in a spicy and aromatic sauce, known for its tangy and savory taste.
+                            </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingredients:</h3>
+                        <p><br>Fish (e.g., cod, salmon, tilapia)
+                            <br>Onions
+                            <br>Tomatoes
+                            <br>Cooking Oil
+                            <br>Garlic
+                            <br>Ginger
+                            <br>Spices (e.g., turmeric, cumin, coriander, red chili powder)
+                            <br>Coconut Milk (optional)
+                            <br>Tamarind Paste
+                            <br>Curry Leaves
+                            <br>Mustard Seeds
+                            <br>Water
+                            <br>Salt
+                            <br>Fresh Coriander Leaves (Cilantro)
+                        </p>
+                        <h3>Instructions:</h3>
+                        <p><br>Heat oil, add mustard seeds, curry leaves.
+                            <br>Sauté onions until golden brown.
+                            <br>Add garlic, ginger, and spices.
+                            <br>Stir in tomatoes until soft.
+                            <br>Add tamarind paste, coconut milk.
+                            <br>Simmer, add fish, and cook.
+                            <br>Garnish with cilantro. Serve with rice.
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "images/fish.jpg" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://tinyurl.com/5f558f59" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+            <div class = "ten-meal-detail" id="ten-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Fries</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">French fries are crispy and golden potato strips, deep-fried to perfection, and seasoned with salt, enjoyed for their classic, savory taste and crispy texture.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingredients:</h3>
+                        <p><br>Potatoes
+                            <br>Cooking Oil (e.g., vegetable oil)
+                            <br>Salt
+                        </p>
+                        <h3>Instructions:</h3>
+                        <p><br>Wash, peel, and cut potatoes into strips.
+                            <br>Soak in cold water to remove starch.
+                            <br>Drain and pat dry with paper towels.
+                            <br>Heat oil in a deep fryer or large pot.
+                            <br>Fry potatoes in batches until golden.
+                            <br>Remove, drain excess oil on paper.
+                            <br>Sprinkle with salt. Serve hot. Enjoy!
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "images/fries.jpg" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://tinyurl.com/5xh9wjtw" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+            <div class = "eleven-meal-detail" id="four-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Egg</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about"> Egg curry is a delectable dish made with boiled eggs in a flavorful and spiced gravy, known for its rich and savory taste.
+                            </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingridients:</h3>
+                        <p><br>Boiled Eggs
+                            <br>Onions
+                            <br>Tomatoes
+                            <br>Cooking Oil or Ghee
+                            <br>Garlic
+                            <br>Ginger
+                            <br>Spices (e.g., turmeric, cumin, coriander, red chili powder)
+                            <br>Garam Masala
+                            <br>Water
+                            <br>Salt
+                            <br>Fresh Coriander Leaves (Cilantro)h
+                        </p>
+                        <h3>Instruction:</h3>
+                        <p><br>Heat oil, sauté onions until golden.
+                            <br>Add garlic, ginger, and spices.
+                            <br>Stir in tomatoes until soft.
+                            <br>Add water, simmer, and season.
+                            <br>Cut boiled eggs in half.
+                            <br>Add eggs to the gravy.
+                            <br>Simmer until heated through.
+                            <br>Garnish with cilantro. Serve with rice or bread.
+                            </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "images/egg.jpg" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://tinyurl.com/yz55k3bv" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+            
+            
+        </div>
+            <!--Ending of Recipe Details-->
+
+            <!--Footer-->
+    <div class="footer">
+        <div class="social-btn">
+            <a href="https://www.facebook.com/" target="_blank" ><i class="	fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/sravallika_reddy/?hl=en" target="_blank" ><i class="	fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/sravallika-reddy-117266227/" target="_blank"><i class="	fab fa-linkedin"></i></a>
+            <a href="https://github.com/SravallikaD" target="_blank" "><i class="	fab fa-github"></i></a>
+        </div>
+            <div class="quick-bar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        <p>Copyright &copy; 2023 Sravallika D. All right reserved</p>  
+    </div>
+
+    <!--Ending of Footer-->
+
+<!--Script for Javascript-->
+<script src="index.js"></script>
+</body>
+</html>
